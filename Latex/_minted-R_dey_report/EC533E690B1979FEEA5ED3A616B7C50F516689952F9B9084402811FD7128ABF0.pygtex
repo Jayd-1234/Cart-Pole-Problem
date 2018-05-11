@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{} feedforwardnet is the net class}
+\PYG{c}{\PYGZpc{} 50 is the number of hidden layer neurons}
+\PYG{n}{net} \PYG{p}{=} \PYG{n}{feedforwardnet}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{);} 		
+\PYG{n}{net}\PYG{p}{.}\PYG{n}{divideParam}\PYG{p}{.}\PYG{n}{trainRatio} \PYG{p}{=} \PYG{l+m+mf}{0.7}\PYG{p}{;}		
+\PYG{n}{net}\PYG{p}{.}\PYG{n}{divideParam}\PYG{p}{.}\PYG{n}{valRatio} \PYG{p}{=} \PYG{l+m+mf}{0.3}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{}Train for 50 epochs}
+\PYG{n}{net}\PYG{p}{.}\PYG{n}{trainParam}\PYG{p}{.}\PYG{n}{epochs} \PYG{p}{=} \PYG{l+m+mi}{50}\PYG{p}{;}				
+\PYG{n}{net}\PYG{p}{.}\PYG{n}{trainParam}\PYG{p}{.}\PYG{n}{max\PYGZus{}fail} \PYG{p}{=} \PYG{l+m+mi}{50}\PYG{p}{;}
+\PYG{n}{net}\PYG{p}{.}\PYG{n}{trainParam}\PYG{p}{.}\PYG{n}{min\PYGZus{}grad} \PYG{p}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{} X is input vector; D is target vector}
+\PYG{n}{net} \PYG{p}{=} \PYG{n}{train}\PYG{p}{(}\PYG{n}{net}\PYG{p}{,} \PYG{n}{X}\PYG{o}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{D}\PYG{o}{\PYGZsq{}}\PYG{p}{);}
+\end{Verbatim}

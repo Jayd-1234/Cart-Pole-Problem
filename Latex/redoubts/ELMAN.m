@@ -1,0 +1,10 @@
+C=num2cell(X)
+T=num2cell(D)
+net = elmannet(1:10,40);
+net.divideParam.trainRatio = 0.7;
+net.divideParam.valRatio = 0.3;
+net.trainParam.epochs = 500;
+net.trainParam.max_fail = 500;
+net.trainParam.min_grad = 0;
+[Xs,Xi,Ai,Ts] = preparets(net,C',T');
+net = train(net,Xs,Ts,Xi,Ai);
